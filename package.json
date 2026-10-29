@@ -1,0 +1,26 @@
+{
+  "name": "zero-trust-nilai",
+  "version": "1.0.0",
+  "description": "Sistem Nilai berbasis API dengan prinsip Zero Trust (NIST SP 800-207) - Tugas Praktikum Keamanan Informasi",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "db:init": "node database/init.js",
+    "audit": "node database/showAudit.js",
+    "start:gateway": "node gateway/src/server.js",
+    "start:nilai": "node service-nilai/src/server.js",
+    "start:transkrip": "node service-transkrip/src/server.js",
+    "test": "node tests/run-tests.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "12.11.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "http-proxy-middleware": "^3.0.10",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
